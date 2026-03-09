@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Play Tennis Predictor</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Play Tennis Predictor</h1>
+
+<form action="/predict" method="post">
+
+<label>Outlook</label>
+<select name="Outlook">
+<option value="Sunny">Sunny</option>
+<option value="Overcast">Overcast</option>
+<option value="Rain">Rain</option>
+</select>
+
+<label>Temperature</label>
+<select name="Temperature">
+<option value="Hot">Hot</option>
+<option value="Mild">Mild</option>
+<option value="Cool">Cool</option>
+</select>
+
+<label>Humidity</label>
+<select name="Humidity">
+<option value="High">High</option>
+<option value="Normal">Normal</option>
+</select>
+
+<label>Wind</label>
+<select name="Wind">
+<option value="Weak">Weak</option>
+<option value="Strong">Strong</option>
+</select>
+
+<button type="submit">Predict</button>
+
+</form>
+
+<h2 class="result">{{ prediction }}</h2>
+
+</div>
+
+</body>
+</html>
